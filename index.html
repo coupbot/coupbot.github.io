@@ -23,15 +23,22 @@
           ['Gen 2',  11],
           ['Gen 3',  6],
           ['Gen 4',  10],
-          ['Gen 3',  6],
-          ['Gen 3',  6],
-          ['Gen 3',  6],
-          ['Gen 3',  6],
-          ['Gen 3',  6],
-          ['Gen 3',  6],
-          ['Gen 3',  6],
-          ['Gen 3',  6],
-          ['Gen 3',  6]
+          ['Gen 5',  6],
+          ['Gen 6',  6],
+          ['Gen 7',  6],
+          ['Gen 8',  6],
+          ['Gen 9',  6],
+          ['Gen 10',  6],
+          ['Gen 11',  6],
+          ['Gen 12',  6],
+          ['Gen 13',  6]
+          ['Gen 6',  6],
+          ['Gen 7',  6],
+          ['Gen 8',  6],
+          ['Gen 9',  6],
+          ['Gen 10',  6],
+          ['Gen 11',  6],
+          ['Gen 12',  6]
         ]);
 
         var options = {
@@ -110,12 +117,12 @@
 							</header>
 
 							<p style="color: black">Our task was to create and train a bot for the board game Coup. Coup is a game similar to the card game BS, in that bluffing is a huge aspect of the game. Here's a short video on how the game works: <br>
-							
+
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/xUNWl5fWfEY?ecver=1" frameborder="0" allowfullscreen></iframe> <br>
 
 							On each turn each player has to evaluate the potential gain from lying against the likelihood of getting caught in a lie, creating many interesting game states. We believe this is important because if a machine can learn to lie to get the upper hand, one of the most inherently human traits, then machines are that much closer to being able to emulate human thoughts and emotions. [add more]? <br> <br>
 
-Before we did anything, we had to code a complete terminal version of the game from scratch. We elected to do this in python. To find the best bot, we implemented a genetic algorithm. We distilled the flow of the game into a tree (link tree here); for each possible decision, there existed a probability which was represented as an edgeweight. from there, Once we got the bots to work, we simulated a battle royale style arena; we generated x random bots, and had them play against each other x times. We then selected the y bots that won the most, and “mutated” them — that is, we preserved some of their edge weights, and slightly altered others. </p>
+Before we did anything, we had to code a complete terminal version of the game from scratch. We elected to do this in python. To find the best bot, we implemented a genetic algorithm. We distilled the flow of the game into a tree (link tree here); for each possible decision, there existed a probability which was represented as an edgeweight. From there, we Once we got the bots to work, we simulated a battle royale style arena; we generated x random bots, and had them play against each other x times. We then selected the y bots that won the most, and “mutated” them — that is, we preserved some of their edge weights, and slightly altered others. </p>
 
 
 						</div>
