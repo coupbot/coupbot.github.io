@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CoupBot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Generation', 'Fitness'],
+          ['Gen 1',  10],
+          ['Gen 2',  11],
+          ['Gen 3',  6],
+          ['Gen 4',  10],
+          ['Gen 3',  6],
+          ['Gen 3',  6],
+          ['Gen 3',  6],
+          ['Gen 3',  6],
+          ['Gen 3',  6],
+          ['Gen 3',  6],
+          ['Gen 3',  6],
+          ['Gen 3',  6],
+          ['Gen 3',  6]
+        ]);
+
+        var options = {
+          title: 'Preformance by Generation',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref">COUPBot</a></li>
+								<li><a href="#about" id="portfolio-link" class="skel-layers-ignoreHref"><span>The Gist</span></a></li>
+								<li><a href="#find" id="about-link" class="skel-layers-ignoreHref"><span>Our Findings</span></a></li>
+								<li><a href="#full" id="contact-link" class="skel-layers-ignoreHref"><span>Full Report</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">COUPBot</h2>
+								<h3>A genetic algorithm implementation</h3><p>
+								Developed by <a href="https://github.com/thbisdikian">Theo Bisdikian</a>, <a href = "https://github.com/sebgarcia">Sebastian Garcia</a>, Jeff Holm, <br> and Ryan Masson at <a href = "http://www.mccormick.northwestern.edu/eecs/">Northwestern University</a> for EECS 349, Machine Learning.
+								</br> Please direct any questions to sgarcia@u.northwestern.edu.</p>
+							</header>
+
+						</div>
+					</section>
+
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>The Gist</h2>
+							</header>
+
+							<p style="color: black">Our task was to create and train a bot for the board game Coup. Coup is a game similar to the card game BS (check out this video for more info on how to play), in that bluffing is a huge aspect of the game. On each turn each player has to evaluate the potential gain from lying against the likelihood of getting caught in a lie, creating many interesting game states. We believe this is important because if a machine can learn to lie to get the upper hand, one of the most inherently human traits, then machines are that much closer to being able to emulate human thoughts and emotions. [add more]? <br> <br>
+
+Before we did anything, we had to code a complete terminal version of the game from scratch. We elected to do this in python. To find the best bot, we implemented a genetic algorithm. We distilled the flow of the game into a tree (link tree here); for each possible decision, there existed a probability which was represented as an edgeweight. from there, Once we got the bots to work, we simulated a battle royale style arena; we generated x random bots, and had them play against each other x times. We then selected the y bots that won the most, and “mutated” them — that is, we preserved some of their edge weights, and slightly altered others. </p>
+
+
+						</div>
+					</section>
+						<section id="find" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Our Findings</h2>
+							</header>
+						<div id="curve_chart" style="width: 900px; height: 500px"></div>
+						</div>
+					</section>
+					<section id="full" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Full Report</h2>
+							</header>
+								<a href="https://www.google.com/" class="button scrolly">Click here to Download</a>
+
+						</div>
+					</section>
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
